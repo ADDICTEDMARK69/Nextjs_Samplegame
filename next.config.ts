@@ -1,7 +1,17 @@
-import type { NextConfig } from "next";
+const nextConfig = {
+   devIndicators: false,
+   
+  experimental: {
+    turbopackUseSystemTlsCerts: true,
+  },
+   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+module.exports = nextConfig

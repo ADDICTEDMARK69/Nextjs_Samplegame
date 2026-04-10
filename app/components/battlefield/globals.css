@@ -16,7 +16,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-  }
+  } 
 }
 
 body {
@@ -25,23 +25,3 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes vnCaretBlink {
-  0% {
-    opacity: 1;
-  }
-  49% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.vn-caret {
-  display: inline-block;
-  margin-left: 2px;
-  animation: vnCaretBlink 1s steps(1, end) infinite;
-}
