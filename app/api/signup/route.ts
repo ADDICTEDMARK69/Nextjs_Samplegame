@@ -20,11 +20,12 @@ export async function POST(request: Request) {
        VALUES (?, ?, ?, ?, ?)`,
       [username, firstname, lastname, email, passwordHash]
     );
+
     return NextResponse.json({ message: "User created" }, { status: 201 });
-  } catch (error: unknown) {
-    const message =
-      error instanceof Error ? error.message : "Signup failed";
-    console.error("Signup error:", message);
-    return NextResponse.json({ error: "Signup failed" }, { status: 500 });
+
+  } catch (err) {
+
+   console.log(err)
+    return NextResponse.json({ error:  "Error in Signup"}, { status: 500 });
   }
 }

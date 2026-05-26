@@ -14,11 +14,16 @@ export default function Home() {
 
   const loginFunc=()=>{
 
-    setisLoading(true);
-    setTimeout(()=>{
-      console.log("hello")
-      setisLoading(false);
-    },1200)
+    // setisLoading(true);
+
+    // setTimeout(()=>{
+    //   setisLoading(false);
+    // },1200)
+    
+
+    router.push("/components/battlefield");
+
+
  
   }
 
